@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="style.css">
+</head>
+<style>
+    .sidebar{
+        display: none;
+    }
+    ul.submenulists {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding-left: 8px;
+    border-top: 1px solid #aaa;
+    margin-top: 8px;
+}
+li.submenu-list {
+    padding: 4px;
+}
+li.menu-list {
+    width: 100%;
+    position: relative;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+.menu_wrapper a {
+    color: white;
+}
+ul.menulists {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.sidebar {
+    display: none;
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: cornflowerblue;
+    bottom: 0;
+    width: 200px;
+}
+
+</style>
+<body>
+
+    <div class="sidenav_toggle">
+        <div class="menu-toggle-btn">
+            <button onClick="menuToggle()" class="btn btn-primary">Menu</button>
+        </div>
+    </div>
+
+<!--Navbar-->
+<div class="sidebar" id="sidenavbar">
+    <div class="sidebar_container">
+        <div class="menu_wrapper">
+            <ul class="menulists">
+                <li class="menu-list">
+                    <a class="menu-item" href="#">Men</a>
+                    <ul class="submenulists">
+                        <li class="submenu-list">
+                            <a href="#" class="submenu-item">
+                                Tshirts
+                            </a>
+                        </li>
+                        <li class="submenu-list">
+                            <a href="#" class="submenu-item">
+                                Trousher
+                            </a>
+                        </li>
+                        <li class="submenu-list">
+                            <a href="#" class="submenu-item">
+                                Jeans
+                            </a>
+                        </li>
+                        <li class="submenu-list">
+                            <a href="#" class="submenu-item">
+                                Blazer
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-list">
+                    <a class="menu-item" href="#">Women</a>
+                </li>
+                <li class="menu-list">
+                    <a class="menu-item" href="#">Kids</a>
+                </li>
+                <li class="menu-list">
+                    <a class="menu-item" href="#">Mobiles</a>
+                </li>
+                <li class="menu-list">
+                    <a class="menu-item" href="#">Laptops</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function menuToggle(){
+        let menuElement = document.getElementById('sidenavbar');
+        if(menuElement.style.display === 'block'){
+            menuElement.style.display = 'none';
+        }else{
+            menuElement.style.display = 'block';
+        }
+    }
+
+</script>
+</body>
+</html>
